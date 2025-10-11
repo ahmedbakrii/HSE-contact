@@ -13,7 +13,6 @@
       padding: 20px;
       color: #333;
     }
-
     .container {
       max-width: 600px;
       margin: auto;
@@ -23,28 +22,23 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
-
     .logo {
       margin-bottom: 15px;
     }
-
     .logo img {
       width: 100px;
       height: auto;
     }
-
     h1 {
       font-size: 22px;
       margin-bottom: 6px;
       color: #0f172a;
     }
-
     h2 {
       font-size: 16px;
       margin: 2px 0 15px 0;
       color: #475569;
     }
-
     h2.urdu {
       font-family: 'Noto Nastaliq Urdu', 'Arial', sans-serif;
       direction: rtl;
@@ -103,6 +97,7 @@
       margin-top: 2px;
     }
 
+    /* زر فيه فقط اسم */
     .single-line {
       justify-content: center !important;
       text-align: center;
@@ -120,6 +115,7 @@
       order: 2;
     }
 
+    /* Responsive */
     @media (max-width: 480px) {
       .links-grid {
         grid-template-columns: 1fr;
@@ -130,14 +126,18 @@
       }
     }
 
-    /* Footer styling */
+    /* Footer */
     .page-footer {
       margin-top: 30px;
-      padding-top: 15px;
       font-size: 14px;
       color: #64748b;
       text-align: center;
-      border-top: 1px solid #e2e8f0;
+    }
+    .page-footer a {
+      color: #0369a1;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 5px;
     }
   </style>
 </head>
@@ -148,8 +148,8 @@
     </div>
 
     <h1>للتواصل مع قسم السلامة والصحة المهنية</h1>
-    <h2 lang="en">Contact the Occupational Safety and Health Department</h2>
-    <h2 class="urdu" lang="ur">شعبۂ تحفظِ صحت و سلامتی سے رابطہ کریں</h2>
+    <h2>Contact the Occupational Safety and Health Department</h2>
+    <h2 class="urdu">شعبۂ تحفظِ صحت و سلامتی سے رابطہ کریں</h2>
 
     <div class="links-grid">
       <!-- Hossam Al-Aslani -->
@@ -221,4 +221,14 @@
       </a>
       <a class="link-item single-line" href="tel:+966542454377">
         <div class="link-text">Ahmed Salah Bakr</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+      </a>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    Designed by Ahmed Salah Bakr | 
+    <a href="https://www.linkedin.com/in/ahmed-salah-5b0567197" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </footer>
+</body>
+</html>
