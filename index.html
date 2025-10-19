@@ -5,156 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>قسم السلامة والصحة المهنية</title>
   <style>
+    :root {
+      --primary-color: #0284c7;
+      --bg-light: #f1f5f9;
+      --card-bg: #ffffff;
+      --text-color: #1e293b;
+      --subtext-color: #64748b;
+      --border-radius: 12px;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-color);
       margin: 0;
       padding: 20px;
-      color: #333;
+      direction: rtl;
     }
+
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 30px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
-    .logo {
-      margin-bottom: 15px;
-    }
+
     .logo img {
-      width: 100px;
-      height: auto;
+      width: 120px;
+      margin-bottom: 20px;
     }
+
+    /* تعديل العنوان ليبقى في سطر واحد مع تلافي الكسر */
+    h1, h2, h3 {
+      margin: 4px 0 12px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+    }
+
     h1 {
-      font-size: 22px;
-      margin-bottom: 6px;
-      color: #0f172a;
-    }
-    h2 {
-      font-size: 16px;
-      margin: 2px 0 15px 0;
-      color: #475569;
-    }
-    h2.urdu {
-      font-family: 'Noto Nastaliq Urdu', 'Arial', sans-serif;
+      font-size: 24px;
+      color: var(--primary-color);
       direction: rtl;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: var(--subtext-color);
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: var(--subtext-color);
+      direction: rtl;
+      font-style: normal;
+      white-space: nowrap;
+      font-family: 'Noto Nastaliq Urdu', serif; /* خط مناسب للأردو */
     }
 
     .links-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    a.link-item {
+    .link-item {
       background: #e0f2fe;
-      color: #0369a1;
-      padding: 14px 12px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
+      padding: 20px;
+      border-radius: var(--border-radius);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      transition: background-color 0.2s;
-      min-height: 70px;
+      flex-wrap: wrap;
+      transition: background-color 0.3s;
+      flex-direction: row-reverse;
     }
 
-    a.link-item:hover {
+    .link-item:hover {
       background: #bae6fd;
     }
 
-    a.link-item img {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-    }
-
     .link-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       flex-grow: 1;
+      text-align: left;
     }
 
-    .name {
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 1.2;
-    }
-
-    .title {
-      font-size: 14px;
-      color: #64748b;
-      margin-top: 2px;
-    }
-
-    .single-line {
-      justify-content: center !important;
-      text-align: center;
-    }
-
-    .single-line .link-text {
-      flex-direction: row;
+    .name-bold {
       font-weight: bold;
-      font-size: 16px;
-      justify-content: center;
-      align-items: center;
+      font-size: 20px;
     }
 
-    .single-line img {
-      order: 2;
-    }
-
-    @media (max-width: 480px) {
-      .links-grid {
-        grid-template-columns: 1fr;
-      }
-      a.link-item {
-        font-size: 18px;
-        padding: 16px;
-      }
-    }
-
-    /* Footer */
-    .page-footer {
-      margin-top: 30px;
+    .subtitle {
       font-size: 14px;
-      color: #64748b;
-      text-align: center;
+      font-style: italic;
+      color: var(--primary-color);
+      margin-top: 4px;
     }
 
-    .footer-content {
+    .icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-with-label {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 14px;
     }
 
-    .linkedin-link {
-      margin-top: 5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #0369a1;
-      text-decoration: none;
-      font-weight: bold;
+    .icon-with-label img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 4px;
     }
-    .linkedin-link img {
-      width: 18px;
-      height: 18px;
-    }
-    .linkedin-link:hover {
+
+    .icon-with-label span {
       text-decoration: underline;
     }
+
+    @media (max-width: 600px) {
+      .link-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .link-text {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      /* نلغي nowrap على العناوين عشان تبقى مرنة ع الموبايل */
+      h1, h2, h3 {
+        white-space: normal;
+      }
+    }
   </style>
+
+  <!-- تحميل خط مناسب للأردو -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
@@ -162,99 +161,232 @@
       <img src="https://media.istockphoto.com/id/1413025608/vector/yellow-safety-first-sign-style-sign-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=KkdULQYfUIfIdJ7oH9tFfUgQ9QLzIQHHb7WRwpSIF04=" alt="Safety First" />
     </div>
 
+    <!-- العناوين الثلاثة -->
     <h1>للتواصل مع قسم السلامة والصحة المهنية</h1>
     <h2>Contact the Occupational Safety and Health Department</h2>
-    <h2 class="urdu">شعبۂ تحفظِ صحت و سلامتی سے رابطہ کریں</h2>
+    <h3>محفوظہ حفاظتی و صحت شعبہ سے رابطہ کریں</h3>
 
     <div class="links-grid">
-      <!-- Hossam Al‑Aslani -->
-      <a class="link-item" href="https://wa.me/966546412274" target="_blank">
+
+      <!-- 1. Hossam -->
+      <div class="link-item">
         <div class="link-text">
-          <div class="name">Eng / Hossam Al‑Aslani</div>
-          <div class="title">HSE Manager</div>
+          <div class="name-bold">Eng / Hossam Al-Aslani</div>
+          <div class="subtitle">Department Manager</div>
         </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a class="link-item" href="tel:+966546412274">
+        <div class="icons">
+          <a href="https://wa.me/966546412274" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966546412274" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- باقي الأسماء بنفس الكود الأصلي بدون تغيير -->
+
+      <!-- 2. Youssef -->
+      <div class="link-item">
         <div class="link-text">
-          <div class="name">Eng / Hossam Al‑Aslani</div>
-          <div class="title">HSE Manager</div>
+          <div class="name-bold">Youssef Al-Mubarak</div>
+          <div class="subtitle">Deputy Manager</div>
         </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
-      </a>
+        <div class="icons">
+          <a href="https://wa.me/966509754375" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966509754375" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
 
-      <!-- Youssef Al‑Mubarak -->
-      <a class="link-item" href="https://wa.me/966509754375" target="_blank">
+      <!-- 3. Kamal -->
+      <div class="link-item">
         <div class="link-text">
-          <div class="name">Youssef Al‑Mubarak</div>
-          <div class="title">Deputy Director</div>
+          <div class="name-bold">Kamal El Essawy</div>
+          <div class="subtitle">Steel Workshop Supervisor</div>
         </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a class="link-item" href="tel:+966509754375">
+        <div class="icons">
+          <a href="https://wa.me/966562608751" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966562608751" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Mohamed Yousry -->
+      <div class="link-item">
         <div class="link-text">
-          <div class="name">Youssef Al‑Mubarak</div>
-          <div class="title">Deputy Director</div>
+          <div class="name-bold">Mohamed Yousry</div>
+          <div class="subtitle">Steel Workshop Supervisor</div>
         </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
-      </a>
+        <div class="icons">
+          <a href="https://wa.me/966562029269" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966562029269" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
 
-      <!-- Haider Malik -->
-      <a class="link-item single-line" href="https://wa.me/966548618302" target="_blank">
-        <div class="link-text">Haider Malik</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a class="link-item single-line" href="tel:+966548618302">
-        <div class="link-text">Haider Malik</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
-      </a>
+      <!-- 5. Amr Sarhan -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Amr Sarhan</div>
+          <div class="subtitle">Sheet Metal Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966545359736" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966545359736" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
 
-      <!-- Amr Sarhan -->
-      <a class="link-item single-line" href="https://wa.me/966540968321" target="_blank">
-        <div class="link-text">Amr Sarhan</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a class="link-item single-line" href="tel:+966540968321">
-        <div class="link-text">Amr Sarhan</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
-      </a>
+      <!-- 6. Ahmed Salah Bakr -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Ahmed Salah Bakr</div>
+          <div class="subtitle">Sheet Metal Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966542454377" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966542454377" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
 
-      <!-- Muhammad Yousry -->
-      <a class="link-item single-line" href="https://wa.me/966562029269" target="_blank">
-        <div class="link-text">Muhammad Yousry</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a class="link-item single-line" href="tel:+966562029269">
-        <div class="link-text">Muhammad Yousry</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
-      </a>
+      <!-- 7. Omar Al-Quraigri -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Omar Al-Quraigri</div>
+          <div class="subtitle">Columns Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966503620036" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966503620036" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
 
-      <!-- Ahmed Salah Bakr -->
-      <a class="link-item single-line" href="https://wa.me/966542454377" target="_blank">
-        <div class="link-text">Ahmed Salah Bakr</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a class="link-item single-line" href="tel:+966542454377">
-        <div class="link-text">Ahmed Salah Bakr</div>
-        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
-      </a>
+      <!-- 8. Ayed Al-Raiqi -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Ayed Al-Raiqi</div>
+          <div class="subtitle">Columns Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966558609606" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966558609606" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 9. Turki Al-Aslani -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Turki Al-Aslani</div>
+          <div class="subtitle">Galvanizing Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966557569786" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966557569786" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 10. Othman Al-Sayed -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Othman Al-Sayed</div>
+          <div class="subtitle">Galvanizing Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966508038408" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966508038408" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 11. Haider Ali -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Haider Ali</div>
+          <div class="subtitle">Painting Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966548618302" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966548618302" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 12. Mohammed Al-Harbi -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Mohammed Al-Harbi</div>
+          <div class="subtitle">Painting Workshop Supervisor</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966543464309" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966543464309" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
-
-  <!-- Footer with LinkedIn icon under name -->
-  <footer class="page-footer">
-    <div class="footer-content">
-      <div>Designed by <strong>Ahmed Salah Bakr</strong></div>
-      <a
-        class="linkedin-link"
-        href="https://www.linkedin.com/in/ahmed-salah-5b0567197"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Icon" />
-        LinkedIn
-      </a>
-    </div>
-  </footer>
 </body>
 </html>
