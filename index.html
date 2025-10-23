@@ -21,6 +21,9 @@
       margin: 0;
       padding: 20px;
       direction: rtl;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .container {
@@ -38,7 +41,6 @@
       margin-bottom: 20px;
     }
 
-    /* تعديل العنوان ليبقى في سطر واحد مع تلافي الكسر */
     h1, h2, h3 {
       margin: 4px 0 12px 0;
       white-space: nowrap;
@@ -66,7 +68,7 @@
       direction: rtl;
       font-style: normal;
       white-space: nowrap;
-      font-family: 'Noto Nastaliq Urdu', serif; /* خط مناسب للأردو */
+      font-family: 'Noto Nastaliq Urdu', serif;
     }
 
     .links-grid {
@@ -133,6 +135,36 @@
       text-decoration: underline;
     }
 
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 20px 10px;
+      background-color: transparent;
+      font-size: 15px;
+      color: #334155;
+      border: none;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #0077b5;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
     @media (max-width: 600px) {
       .link-item {
         flex-direction: column;
@@ -145,14 +177,12 @@
         margin-bottom: 10px;
       }
 
-      /* نلغي nowrap على العناوين عشان تبقى مرنة ع الموبايل */
       h1, h2, h3 {
         white-space: normal;
       }
     }
   </style>
 
-  <!-- تحميل خط مناسب للأردو -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -161,14 +191,13 @@
       <img src="https://media.istockphoto.com/id/1413025608/vector/yellow-safety-first-sign-style-sign-isolated-on-white-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=KkdULQYfUIfIdJ7oH9tFfUgQ9QLzIQHHb7WRwpSIF04=" alt="Safety First" />
     </div>
 
-    <!-- العناوين الثلاثة -->
     <h1>للتواصل مع قسم السلامة والصحة المهنية</h1>
     <h2>Contact the Occupational Safety and Health Department</h2>
     <h3>محفوظہ حفاظتی و صحت شعبہ سے رابطہ کریں</h3>
 
     <div class="links-grid">
 
-      <!-- 1. Hossam -->
+      <!-- 1 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Eng / Hossam Al-Aslani</div>
@@ -186,9 +215,7 @@
         </div>
       </div>
 
-      <!-- باقي الأسماء بنفس الكود الأصلي بدون تغيير -->
-
-      <!-- 2. Youssef -->
+      <!-- 2 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Youssef Al-Mubarak</div>
@@ -206,7 +233,25 @@
         </div>
       </div>
 
-      <!-- 3. Kamal -->
+      <!-- 3 (Clinic / Dr Mahmoud Bakr) -->
+      <div class="link-item">
+        <div class="link-text">
+          <div class="name-bold">Clinic</div>
+          <div class="subtitle">Mahmoud Bakr</div>
+        </div>
+        <div class="icons">
+          <a href="https://wa.me/966566128028" target="_blank" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+966566128028" class="icon-with-label">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" />
+            <span>Call</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Kamal El Essawy</div>
@@ -224,7 +269,7 @@
         </div>
       </div>
 
-      <!-- 4. Mohamed Yousry -->
+      <!-- 5 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Mohamed Yousry</div>
@@ -242,7 +287,7 @@
         </div>
       </div>
 
-      <!-- 5. Amr Sarhan -->
+      <!-- 6 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Amr Sarhan</div>
@@ -260,7 +305,7 @@
         </div>
       </div>
 
-      <!-- 6. Ahmed Salah Bakr -->
+      <!-- 7 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Ahmed Salah Bakr</div>
@@ -278,7 +323,7 @@
         </div>
       </div>
 
-      <!-- 7. Omar Al-Quraigri -->
+      <!-- 8 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Omar Al-Quraigri</div>
@@ -296,7 +341,7 @@
         </div>
       </div>
 
-      <!-- 8. Ayed Al-Raiqi -->
+      <!-- 9 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Ayed Al-Raiqi</div>
@@ -314,7 +359,7 @@
         </div>
       </div>
 
-      <!-- 9. Turki Al-Aslani -->
+      <!-- 10 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Turki Al-Aslani</div>
@@ -332,7 +377,7 @@
         </div>
       </div>
 
-      <!-- 10. Othman Al-Sayed -->
+      <!-- 11 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Othman Al-Sayed</div>
@@ -350,7 +395,7 @@
         </div>
       </div>
 
-      <!-- 11. Haider Ali -->
+      <!-- 12 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Haider Ali</div>
@@ -368,7 +413,7 @@
         </div>
       </div>
 
-      <!-- 12. Mohammed Al-Harbi -->
+      <!-- 13 -->
       <div class="link-item">
         <div class="link-text">
           <div class="name-bold">Mohammed Al-Harbi</div>
@@ -388,5 +433,16 @@
 
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>Designed &amp; Developed by</div>
+    <div>
+      <a href="https://www.linkedin.com/in/ahmed-salah-5b0567197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+        Ahmed Salah Bakr
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
